@@ -11,14 +11,10 @@ class GreetingsScreenViewController: UIViewController {
 
     @IBOutlet weak var greetingsLabel: UILabel!
     
-    var greetings: String!
+    var user = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingsLabel.text = greetings
-    }
-    
-    @IBAction func logOutButtonPressed() {
-        dismiss(animated: true, completion: nil)
+        greetingsLabel.text = "Hello \(user)!"
     }
 }

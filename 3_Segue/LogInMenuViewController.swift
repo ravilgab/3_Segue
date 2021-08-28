@@ -12,31 +12,26 @@ class LogInMenuViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        userNameTF.returnKeyType = .next
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        resetPasswordField()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+    private let userName = "Tim"
+    private let password = "Cook"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingsScreenVC = segue.destination as? GreetingsScreenViewController else { return }
-        
-        if (userNameTF.text == "Tim") && (passwordTF.text == "Cook") {
-            greetingsScreenVC.greetings = "Hello \(userNameTF.text ?? "")!"
-        } else {
-            credentialsError()
-            resetPasswordField()
-        }
+        greetingsScreenVC.user = userName
     }
 
-    @IBAction func forgotNameButton() {
+    @IBAction func logInPressed() {
+        if userNameTF.text != userName || passwordTF.text != password {
+            credentialsFailAlert()
+        }
+    }
+    
+    
+    private func showAlert(title: String ) {
+        
+    }
+    
+    @IBAction func forgotNamePressed() {
         let alert = UIAlertController(title: "Oops!", message: "Your user name is Tim", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
@@ -44,7 +39,7 @@ class LogInMenuViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    @IBAction func forgotPasswordButton() {
+    @IBAction func forgotPasswordPressed() {
         let alert = UIAlertController(title: "Oops!", message: "Your password is Cook", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Thanks", style: .default))
@@ -52,30 +47,32 @@ class LogInMenuViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func credentialsError() {
-        let alert = UIAlertController(title: "Invalid login or password", message: "Please enter correct login and password", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok", style: .default))
-        
-        present(alert, animated: true)
-    }
+        private func credentialsFailAlert() {
+            let alert = UIAlertController(title: "Invalid login or password", message: "Please enter correct login and password", preferredStyle: .alert)
     
-    private func resetPasswordField() {
-        passwordTF.text = ""
-    }
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let textTag = textField.tag + 1
-        
-        let nextResponder = textField.superview?.viewWithTag(textTag)
-        
-        if nextResponder != nil {
-            nextResponder?.becomeFirstResponder()
-        } else {
-            self.view.endEditing(true)
+            present(alert, animated: true)
         }
-        
-        return true
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
+extension LogInMenuViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            if textField == userNameTF {
+                passwordTF.becomeFirstResponder()
+            } else {
+                logInPressed()
+                performSegue(withIdentifier: "showGreetingsScreenVC", sender: nil)
+            }
+            return true
+        }
+}
