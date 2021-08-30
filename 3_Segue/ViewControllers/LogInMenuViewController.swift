@@ -16,19 +16,26 @@ class LogInMenuViewController: UIViewController {
     private let password = "Cook"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let greetingsScreenVC = segue.destination as? GreetingsScreenViewController else { return }
-        greetingsScreenVC.user = userName
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let greetingsScreenVC = viewController as? GreetingsScreenViewController {
+                greetingsScreenVC.user = userName
+                //greetingsScreenVC.user = User.testUser()
+            } else if let hobbyVC = viewController as? HobbyViewController {
+                hobbyVC.myHobbyText = "text for test reasons"
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutMeVC = navigationVC.topViewController as? AboutMeViewController
+            }
+        }
     }
 
     @IBAction func logInPressed() {
         if userNameTF.text != userName || passwordTF.text != password {
             credentialsFailAlert()
+            passwordTF.text = ""
         }
-    }
-    
-    
-    private func showAlert(title: String ) {
-        
     }
     
     @IBAction func forgotNamePressed() {
@@ -47,13 +54,13 @@ class LogInMenuViewController: UIViewController {
         present(alert, animated: true)
     }
     
-        private func credentialsFailAlert() {
-            let alert = UIAlertController(title: "Invalid login or password", message: "Please enter correct login and password", preferredStyle: .alert)
-    
-            alert.addAction(UIAlertAction(title: "Ok", style: .default))
-    
-            present(alert, animated: true)
-        }
+    private func credentialsFailAlert() {
+        let alert = UIAlertController(title: "Invalid login or password", message: "Please enter correct login and password", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+
+        present(alert, animated: true)
+    }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         userNameTF.text = ""
@@ -73,6 +80,7 @@ extension LogInMenuViewController: UITextFieldDelegate {
                 logInPressed()
                 performSegue(withIdentifier: "showGreetingsScreenVC", sender: nil)
             }
+        
             return true
         }
 }

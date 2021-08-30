@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F16F1CD526D6E0D7001690FF /* GreetingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F1CD426D6E0D7001690FF /* GreetingsScreenViewController.swift */; };
+		F16F1D0326DBEBA2001690FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F1D0226DBEBA2001690FF /* User.swift */; };
+		F16F1D0726DC06FB001690FF /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F1D0626DC06FB001690FF /* AboutMeViewController.swift */; };
+		F16F1D0926DC0716001690FF /* MoreAboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F1D0826DC0716001690FF /* MoreAboutMeViewController.swift */; };
+		F16F1D0B26DC1723001690FF /* HobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F1D0A26DC1723001690FF /* HobbyViewController.swift */; };
 		F17FEB7426D695B10063156A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17FEB7326D695B10063156A /* AppDelegate.swift */; };
 		F17FEB7626D695B10063156A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17FEB7526D695B10063156A /* SceneDelegate.swift */; };
 		F17FEB7826D695B10063156A /* LogInMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17FEB7726D695B10063156A /* LogInMenuViewController.swift */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		F16F1CD426D6E0D7001690FF /* GreetingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsScreenViewController.swift; sourceTree = "<group>"; };
+		F16F1D0226DBEBA2001690FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F16F1D0626DC06FB001690FF /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		F16F1D0826DC0716001690FF /* MoreAboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutMeViewController.swift; sourceTree = "<group>"; };
+		F16F1D0A26DC1723001690FF /* HobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyViewController.swift; sourceTree = "<group>"; };
 		F17FEB7026D695B10063156A /* 3_Segue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3_Segue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17FEB7326D695B10063156A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F17FEB7526D695B10063156A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F16F1CFD26DBE3A4001690FF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F17FEB7726D695B10063156A /* LogInMenuViewController.swift */,
+				F16F1CD426D6E0D7001690FF /* GreetingsScreenViewController.swift */,
+				F16F1D0626DC06FB001690FF /* AboutMeViewController.swift */,
+				F16F1D0826DC0716001690FF /* MoreAboutMeViewController.swift */,
+				F16F1D0A26DC1723001690FF /* HobbyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F16F1CFE26DBE3B9001690FF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F17FEB7926D695B10063156A /* Main.storyboard */,
+				F17FEB7E26D695B60063156A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F16F1CFF26DBE3CA001690FF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F17FEB7326D695B10063156A /* AppDelegate.swift */,
+				F17FEB7526D695B10063156A /* SceneDelegate.swift */,
+				F17FEB8126D695B60063156A /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F16F1D0026DBE3D8001690FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F17FEB7C26D695B60063156A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F16F1D0126DBE3F7001690FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F16F1D0226DBEBA2001690FF /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F17FEB6726D695B10063156A = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +113,11 @@
 		F17FEB7226D695B10063156A /* 3_Segue */ = {
 			isa = PBXGroup;
 			children = (
-				F17FEB7326D695B10063156A /* AppDelegate.swift */,
-				F17FEB7526D695B10063156A /* SceneDelegate.swift */,
-				F17FEB7726D695B10063156A /* LogInMenuViewController.swift */,
-				F16F1CD426D6E0D7001690FF /* GreetingsScreenViewController.swift */,
-				F17FEB7926D695B10063156A /* Main.storyboard */,
-				F17FEB7C26D695B60063156A /* Assets.xcassets */,
-				F17FEB7E26D695B60063156A /* LaunchScreen.storyboard */,
-				F17FEB8126D695B60063156A /* Info.plist */,
+				F16F1D0126DBE3F7001690FF /* Models */,
+				F16F1CFD26DBE3A4001690FF /* ViewControllers */,
+				F16F1CFE26DBE3B9001690FF /* Storyboards */,
+				F16F1D0026DBE3D8001690FF /* Resources */,
+				F16F1CFF26DBE3CA001690FF /* App */,
 			);
 			path = 3_Segue;
 			sourceTree = "<group>";
@@ -107,7 +159,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F17FEB6B26D695B10063156A /* Build configuration list for PBXProject "3_Segue" */;
+			buildConfigurationList = F17FEB6B26D695B10063156A /* Build configuration list for PBXProject "3_Segue_for test" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,7 +198,11 @@
 				F17FEB7826D695B10063156A /* LogInMenuViewController.swift in Sources */,
 				F16F1CD526D6E0D7001690FF /* GreetingsScreenViewController.swift in Sources */,
 				F17FEB7426D695B10063156A /* AppDelegate.swift in Sources */,
+				F16F1D0926DC0716001690FF /* MoreAboutMeViewController.swift in Sources */,
+				F16F1D0326DBEBA2001690FF /* User.swift in Sources */,
+				F16F1D0726DC06FB001690FF /* AboutMeViewController.swift in Sources */,
 				F17FEB7626D695B10063156A /* SceneDelegate.swift in Sources */,
+				F16F1D0B26DC1723001690FF /* HobbyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RR2792TYH2;
-				INFOPLIST_FILE = 3_Segue/Info.plist;
+				INFOPLIST_FILE = 3_Segue/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +370,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RR2792TYH2;
-				INFOPLIST_FILE = 3_Segue/Info.plist;
+				INFOPLIST_FILE = 3_Segue/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F17FEB6B26D695B10063156A /* Build configuration list for PBXProject "3_Segue" */ = {
+		F17FEB6B26D695B10063156A /* Build configuration list for PBXProject "3_Segue_for test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F17FEB8226D695B60063156A /* Debug */,

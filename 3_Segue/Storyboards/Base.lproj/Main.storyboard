@@ -38,7 +38,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="beI-Ap-vLS" userLabel="Buttons Stack View">
-                                <rect key="frame" x="16" y="329" width="288" height="30"/>
+                                <rect key="frame" x="16" y="274" width="288" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCM-Li-Wn8">
                                         <rect key="frame" x="0.0" y="0.0" width="134" height="30"/>
@@ -59,23 +59,23 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoB-aF-lar">
-                                <rect key="frame" x="133" y="254" width="54" height="36"/>
+                                <rect key="frame" x="133" y="218" width="54" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="XhC-pK-tDf"/>
-                                    <segue destination="z3y-Qt-wIU" kind="presentation" identifier="showGreetingsScreenVC" modalPresentationStyle="fullScreen" id="s5T-j3-AA2"/>
+                                    <segue destination="IP9-tC-efR" kind="presentation" identifier="showGreetingsScreenVC" modalPresentationStyle="fullScreen" id="s5T-j3-AA2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="beI-Ap-vLS" firstAttribute="top" secondItem="hoB-aF-lar" secondAttribute="bottom" constant="39" id="32C-4l-IZR"/>
+                            <constraint firstItem="beI-Ap-vLS" firstAttribute="top" secondItem="hoB-aF-lar" secondAttribute="bottom" constant="20" id="32C-4l-IZR"/>
                             <constraint firstItem="kt8-O9-dI1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="9Be-3E-L9M"/>
                             <constraint firstItem="kt8-O9-dI1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ARs-Nj-rgh"/>
                             <constraint firstItem="hoB-aF-lar" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Aqe-EW-htb"/>
-                            <constraint firstItem="hoB-aF-lar" firstAttribute="top" secondItem="kt8-O9-dI1" secondAttribute="bottom" constant="56" id="HXX-ss-M1d"/>
+                            <constraint firstItem="hoB-aF-lar" firstAttribute="top" secondItem="kt8-O9-dI1" secondAttribute="bottom" constant="20" id="HXX-ss-M1d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kt8-O9-dI1" secondAttribute="trailing" constant="60" id="I7v-1a-XnF"/>
                             <constraint firstItem="beI-Ap-vLS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="foj-Tq-1w8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="beI-Ap-vLS" secondAttribute="trailing" constant="16" id="tlJ-eS-acY"/>
@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
         </scene>
-        <!--Greetings Screen View Controller-->
+        <!--Welcome-->
         <scene sceneID="S0g-Ao-ZxL">
             <objects>
                 <viewController id="z3y-Qt-wIU" customClass="GreetingsScreenViewController" customModule="__Segue" customModuleProvider="target" sceneMemberID="viewController">
@@ -123,6 +123,7 @@
                             <constraint firstItem="Y2E-2D-Uu2" firstAttribute="centerX" secondItem="Mya-Hz-Noq" secondAttribute="centerX" id="VhL-aL-hF1"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Welcome" image="hand.raised" catalog="system" id="DaB-bT-PYD"/>
                     <navigationItem key="navigationItem" id="vmV-pQ-Y6R"/>
                     <connections>
                         <outlet property="greetingsLabel" destination="D4b-Hh-4Fr" id="hAw-JX-hcn"/>
@@ -131,10 +132,130 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNO-uB-AI4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="pjT-2v-9ct" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="93"/>
+            <point key="canvasLocation" x="2498" y="-616"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iZd-CZ-Hoe">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IP9-tC-efR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yda-G7-Q2d">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="z3y-Qt-wIU" kind="relationship" relationship="viewControllers" id="vQ1-8k-OfV"/>
+                        <segue destination="w2B-xa-J9H" kind="relationship" relationship="viewControllers" id="bmp-PW-9U9"/>
+                        <segue destination="tjQ-k4-AMe" kind="relationship" relationship="viewControllers" id="mGX-TG-YaK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EN2-lU-Djb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="92.957746478873247"/>
+        </scene>
+        <!--Хобби-->
+        <scene sceneID="jnY-FE-oeP">
+            <objects>
+                <viewController id="w2B-xa-J9H" customClass="HobbyViewController" customModule="__Segue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ccN-xo-1kz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-hk-98F">
+                                <rect key="frame" x="16" y="20" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wFa-8Y-wDW"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="hjI-hk-98F" firstAttribute="leading" secondItem="wFa-8Y-wDW" secondAttribute="leading" constant="16" id="2Lc-mZ-HRF"/>
+                            <constraint firstItem="hjI-hk-98F" firstAttribute="top" secondItem="wFa-8Y-wDW" secondAttribute="top" constant="20" id="hLy-UR-TBp"/>
+                            <constraint firstItem="wFa-8Y-wDW" firstAttribute="trailing" secondItem="hjI-hk-98F" secondAttribute="trailing" constant="16" id="mn8-0c-Oqz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Хобби" image="guitars" catalog="system" id="ifv-ra-vuu"/>
+                    <connections>
+                        <outlet property="myHobbyLabel" destination="hjI-hk-98F" id="WIl-cp-cen"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Yj-bT-Yzo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2498" y="93"/>
+        </scene>
+        <!--Обо мне-->
+        <scene sceneID="nrV-64-U1q">
+            <objects>
+                <viewController id="WzB-jH-bKw" customClass="AboutMeViewController" customModule="__Segue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bXc-zD-Tyj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uiw-Lj-Uco">
+                                <rect key="frame" x="62.5" y="467" width="195" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Больше информации"/>
+                                <connections>
+                                    <segue destination="T9H-IG-Ac1" kind="show" id="6QY-um-hgm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q1y-xN-bkt"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="Q1y-xN-bkt" firstAttribute="bottom" secondItem="Uiw-Lj-Uco" secondAttribute="bottom" constant="16" id="9TN-bb-Bx0"/>
+                            <constraint firstItem="Uiw-Lj-Uco" firstAttribute="centerX" secondItem="bXc-zD-Tyj" secondAttribute="centerX" id="Jzo-LZ-wOQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Обо мне" image="person" catalog="system" id="Z9Z-bB-EEB"/>
+                    <navigationItem key="navigationItem" title="Обо мне" id="IcM-Gw-Ri0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xt9-sI-ZtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3242" y="846"/>
+        </scene>
+        <!--Еще обо мне-->
+        <scene sceneID="fSn-0t-rSi">
+            <objects>
+                <viewController id="T9H-IG-Ac1" customClass="MoreAboutMeViewController" customModule="__Segue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RmH-KR-SFI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kD8-SZ-qIK"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Еще обо мне" id="Qwd-uu-aYv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDW-Ds-okG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3996" y="846"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="AAd-zV-Yvr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tjQ-k4-AMe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="7zd-sP-wk7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vvQ-Zo-Zyd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WzB-jH-bKw" kind="relationship" relationship="rootViewController" id="P5m-P8-2H3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dU-nC-ujy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2498" y="847"/>
         </scene>
     </scenes>
     <resources>
+        <image name="guitars" catalog="system" width="128" height="100"/>
+        <image name="hand.raised" catalog="system" width="128" height="128"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
