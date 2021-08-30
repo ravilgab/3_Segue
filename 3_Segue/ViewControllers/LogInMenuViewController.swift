@@ -12,8 +12,7 @@ class LogInMenuViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    private let userName = "Tim"
-    private let password = "Cook"
+    private let user = User.getUserData()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
@@ -21,18 +20,16 @@ class LogInMenuViewController: UIViewController {
         
         for viewController in viewControllers {
             if let greetingsScreenVC = viewController as? GreetingsScreenViewController {
-                greetingsScreenVC.user = userName
-                //greetingsScreenVC.user = User.testUser()
-            } else if let hobbyVC = viewController as? HobbyViewController {
-                hobbyVC.myHobbyText = "text for test reasons"
+                greetingsScreenVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutMeVC = navigationVC.topViewController as? AboutMeViewController
+                aboutMeVC?.user = user
             }
         }
     }
 
     @IBAction func logInPressed() {
-        if userNameTF.text != userName || passwordTF.text != password {
+        if userNameTF.text != user.userName || passwordTF.text != user.password {
             credentialsFailAlert()
             passwordTF.text = ""
         }

@@ -11,7 +11,6 @@
 		F16F1D0326DBEBA2001690FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F1D0226DBEBA2001690FF /* User.swift */; };
 		F16F1D0726DC06FB001690FF /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F1D0626DC06FB001690FF /* AboutMeViewController.swift */; };
 		F16F1D0926DC0716001690FF /* MoreAboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F1D0826DC0716001690FF /* MoreAboutMeViewController.swift */; };
-		F16F1D0B26DC1723001690FF /* HobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F1D0A26DC1723001690FF /* HobbyViewController.swift */; };
 		F17FEB7426D695B10063156A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17FEB7326D695B10063156A /* AppDelegate.swift */; };
 		F17FEB7626D695B10063156A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17FEB7526D695B10063156A /* SceneDelegate.swift */; };
 		F17FEB7826D695B10063156A /* LogInMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17FEB7726D695B10063156A /* LogInMenuViewController.swift */; };
@@ -25,7 +24,6 @@
 		F16F1D0226DBEBA2001690FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F16F1D0626DC06FB001690FF /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		F16F1D0826DC0716001690FF /* MoreAboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutMeViewController.swift; sourceTree = "<group>"; };
-		F16F1D0A26DC1723001690FF /* HobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyViewController.swift; sourceTree = "<group>"; };
 		F17FEB7026D695B10063156A /* 3_Segue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3_Segue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17FEB7326D695B10063156A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F17FEB7526D695B10063156A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +52,6 @@
 				F16F1CD426D6E0D7001690FF /* GreetingsScreenViewController.swift */,
 				F16F1D0626DC06FB001690FF /* AboutMeViewController.swift */,
 				F16F1D0826DC0716001690FF /* MoreAboutMeViewController.swift */,
-				F16F1D0A26DC1723001690FF /* HobbyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,7 +199,6 @@
 				F16F1D0326DBEBA2001690FF /* User.swift in Sources */,
 				F16F1D0726DC06FB001690FF /* AboutMeViewController.swift in Sources */,
 				F17FEB7626D695B10063156A /* SceneDelegate.swift in Sources */,
-				F16F1D0B26DC1723001690FF /* HobbyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,20 +10,27 @@ struct User {
     let password: String
     let person: Person
     
-    static func testUser() -> [User] {
-        [
-            User(userName: "Tim", password: "Cook", person: .init(personName: "Равиль",
-                                                                  personSurname: "Габитов",
-                                                                  hobby: "Игра в пятнашки"))
-        ]
+    static func getUserData() -> User {
+        User(userName: "Tim", password: "Cook", person: Person.getPerson())
     }
 }
 
 struct Person {
-    let personName: String
-    let personSurname: String
+    let name: String
+    let surname: String
     
-    let hobby: String
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
+    let about: String
+    let image: String
         
+    static func getPerson() -> Person {
+        Person(name: "Равиль",
+               surname: "Габитов",
+               about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+               image: "SteveJobsSquare")
+    }
 }
 
